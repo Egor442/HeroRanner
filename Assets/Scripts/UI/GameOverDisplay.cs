@@ -26,14 +26,14 @@ public class GameOverDisplay : MonoBehaviour
     {
         _player.Died += OnDied;
         _restartButton.onClick.AddListener(OnRestartButtonClick);
-        _mainMenuBatton.onClick.AddListener(OnMainMenuButtonClick);
+        _mainMenuBatton.onClick.AddListener(SwithOnMainMenu);
     }
 
     private void OnDisable()
     {
         _player.Died -= OnDied;
         _restartButton.onClick.RemoveListener(OnRestartButtonClick);
-        _mainMenuBatton.onClick.RemoveListener(OnMainMenuButtonClick);
+        _mainMenuBatton.onClick.RemoveListener(SwithOnMainMenu);
     }
 
     private void OnDied()
@@ -52,7 +52,7 @@ public class GameOverDisplay : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    private void OnMainMenuButtonClick()
+    private void SwithOnMainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);

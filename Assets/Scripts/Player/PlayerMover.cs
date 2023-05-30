@@ -12,6 +12,18 @@ public class PlayerMover : MonoBehaviour
 
     private Vector3 _targetPosition;
 
+    public void TryMoveUp()
+    {
+        if (_targetPosition.y < _maxHeight)
+            _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y + _stepSize);
+    }
+
+    public void TryMoveDown()
+    {
+        if (_targetPosition.y > _minHeihgt)
+            _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y - _stepSize);
+    }
+
     private void Start()
     {
         _targetPosition = transform.position;
@@ -21,17 +33,5 @@ public class PlayerMover : MonoBehaviour
     {
         if (transform.position != _targetPosition)
             transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _moveSpeed * Time.deltaTime);
-    }
-
-    public void TryMoveUp()
-    {
-        if(_targetPosition.y < _maxHeight)
-            _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y + _stepSize);
-    }
-
-    public void TryMoveDown()
-    {
-       if(_targetPosition.y > _minHeihgt)
-            _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y - _stepSize);
-    }
+    }  
 }
