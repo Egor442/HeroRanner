@@ -10,15 +10,15 @@ public class MainMenuDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        _playButton.onClick.AddListener(OnPlayButtonClick);
+        _playButton.onClick.AddListener(SwithOnGame);
     }
 
     private void OnDisable()
     {
-        _playButton.onClick.RemoveListener(OnPlayButtonClick);
+        _playButton.onClick.RemoveListener(SwithOnGame);
     }
 
-    private void OnPlayButtonClick()
+    private void SwithOnGame()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1;

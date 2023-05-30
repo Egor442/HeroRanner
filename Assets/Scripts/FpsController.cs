@@ -6,6 +6,6 @@ public class FpsController : MonoBehaviour
 {
     private void Start()
     {
-        Application.targetFrameRate = 500;
+        Application.targetFrameRate = 120;
     }
 }
