@@ -17,7 +17,7 @@ public class GameOverDisplay : MonoBehaviour
 
     private CanvasGroup _gameOverGroup;
 
-    private void Awake()
+    public void Initialize()
     {
         _gameOverGroup = GetComponent<CanvasGroup>();
     }

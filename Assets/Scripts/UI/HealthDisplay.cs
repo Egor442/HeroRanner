@@ -10,7 +10,7 @@ public class HealthDisplay : MonoBehaviour
 
     private Image[] _hearts;
 
-    private void Awake()
+    public void Initialize()
     {
         _hearts = GetComponentsInChildren<Image>();
     }

@@ -9,6 +9,8 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private Parallax _parallax;
     [SerializeField] private Spawner _spawner;
+    [SerializeField] private GameOverDisplay _gameOverDisplay;
+    [SerializeField] private HealthDisplay _healthDisplay;
 
     private void Awake()
     {
@@ -17,5 +19,7 @@ public class EntryPoint : MonoBehaviour
         _playerInput.Initialize();
         _spawner.Initialize();
         _parallax.Initialize();
+        _gameOverDisplay.Initialize();
+        _healthDisplay.Initialize();
     }
 }
