@@ -11,15 +11,15 @@ public class Enemy : MonoBehaviour
 
     public event UnityAction Died;
 
+    private void Awake()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
+
     private void Die()
     {
         _animator.SetTrigger("Death");
         Died?.Invoke();
-    }
-
-    private void Awake()
-    {
-        _animator = GetComponentInChildren<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

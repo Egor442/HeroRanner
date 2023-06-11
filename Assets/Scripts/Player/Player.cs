@@ -19,6 +19,14 @@ public class Player : MonoBehaviour
 
     public bool IsDied { get; private set; }  
 
+    public void Initialize()
+    {
+        _animator = GetComponent<Animator>();
+
+        IsDied = false;
+        HealthChanged?.Invoke(_health);
+    }
+
     public void TakeDamage(int damage)
     {       
         _health -= damage;
@@ -38,17 +46,6 @@ public class Player : MonoBehaviour
         IsDied = true;
 
         Died?.Invoke();
-    }
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
-
-    private void Start()
-    {
-        IsDied = false;
-        HealthChanged?.Invoke(_health);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

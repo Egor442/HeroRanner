@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
 
     private PlayerMover _mover;
 
-    private void Awake()
+    public void Initialize()
     {
         _mover = GetComponent<PlayerMover>();
     }
