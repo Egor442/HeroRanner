@@ -11,7 +11,7 @@ public class Parallax : MonoBehaviour
     private RawImage _image;
     private float _imagePositionX;
 
-    private void Start()
+    public void Initialize()
     {
         _image = GetComponent<RawImage>();
     }

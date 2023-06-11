@@ -10,15 +10,12 @@ public class Spawner : ObjectPool
     private Transform[] _spawnPoints;
     private float _elepsedTime;
 
-    private void Awake()
+    public void Initialize()
     {
         _spawnPoints = GetComponentsInChildren<Transform>();
-    }
 
-    private void Start()
-    {
         _elepsedTime = 0;
-        Initialize(_enemyPrefabs);
+        InitializePrefabe(_enemyPrefabs);
     }
 
     private void Update()

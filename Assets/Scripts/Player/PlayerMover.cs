@@ -12,6 +12,11 @@ public class PlayerMover : MonoBehaviour
 
     private Vector3 _targetPosition;
 
+    public void Initialize()
+    {
+        _targetPosition = transform.position;
+    }
+
     public void TryMoveUp()
     {
         if (_targetPosition.y < _maxHeight)
@@ -22,11 +27,6 @@ public class PlayerMover : MonoBehaviour
     {
         if (_targetPosition.y > _minHeihgt)
             _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y - _stepSize);
-    }
-
-    private void Start()
-    {
-        _targetPosition = transform.position;
     }
 
     private void Update()
