@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int _damage;
+    [SerializeField] private EnemyData _data;
 
     private Animator _animator;
 
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            player.TakeDamage(_damage);
+            player.TakeDamage(_data.Damage);
             Die();
         }
 
