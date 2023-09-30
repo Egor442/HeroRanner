@@ -28,7 +28,9 @@ public class HealthDisplay : MonoBehaviour
         for (int i = 0; i < _hearts.Length; i++)
         {
             if (i >= health)
+            {
                 _hearts[i].DOFade(0, 0.5f);
+            }
         }
     }
 }

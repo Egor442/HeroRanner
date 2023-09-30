@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        _enemyMover.Move(_data.Speed);
+        _enemyMover.Move();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
         }
 
         if (collision.gameObject.name == "Destroyer")
+        {
             gameObject.SetActive(false);
+        }
     }
 }

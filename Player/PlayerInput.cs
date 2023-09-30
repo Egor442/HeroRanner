@@ -29,16 +29,24 @@ public class PlayerInput : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
+        {
             _mover.TryMoveUp();
+        }
 
         if (Input.GetKeyDown(KeyCode.S))
+        {
             _mover.TryMoveDown();
+        }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
             _mover.TryMoveUp();
+        }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
             _mover.TryMoveDown();
+        }
     }
 
     private void OnTryMoveUpButtonClick()

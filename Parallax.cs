@@ -19,7 +19,9 @@ public class Parallax : MonoBehaviour
         _imagePositionX += _speed * Time.deltaTime;
 
         if(_imagePositionX > 1)
+        {
             _imagePositionX = 0;
+        }
 
         _image.uvRect = new Rect(_imagePositionX, 0, _image.uvRect.width, _image.uvRect.height);
     }

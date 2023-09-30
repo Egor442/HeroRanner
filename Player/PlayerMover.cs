@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class PlayerMover : MonoBehaviour, IPlayerMover
 {
     [SerializeField] private float _moveSpeed;
@@ -18,18 +17,24 @@ public class PlayerMover : MonoBehaviour, IPlayerMover
     public void TryMoveUp()
     {
         if (_targetPosition.y < _maxHeight)
+        {
             _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y + _stepSize);
+        }
     }
 
     public void TryMoveDown()
     {
         if (_targetPosition.y > _minHeihgt)
+        {
             _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y - _stepSize);
+        }
     }
 
     private void Update()
     {
         if (transform.position != _targetPosition)
+        {
             transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _moveSpeed * Time.deltaTime);
+        }
     }  
 }
