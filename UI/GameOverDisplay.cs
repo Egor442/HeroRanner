@@ -37,11 +37,12 @@ public class GameOverDisplay : MonoBehaviour
     private void OnDied()
     {
         _gameOverGroup.DOFade(1, 0.2f).SetEase(Ease.Linear);
-
         _resultNumberScoreText.text = _scoreDisplay.Score.ToString();
 
         if (_gameOverGroup.alpha == 1 && _playerDeceased.IsDied)
+        {
             Time.timeScale = 0;
+        }
     }
 
     private void OnRestartButtonClick()

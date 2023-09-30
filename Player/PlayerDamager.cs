@@ -28,6 +28,8 @@ public class PlayerDamager : MonoBehaviour, IPlayerDamager
         _playerAnimator.TakeDamage();
 
         if (_health <= 0)
+        {
             _playerDeceased.Die();
+        }
     }
 }
