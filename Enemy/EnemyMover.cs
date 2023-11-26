@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMover : MonoBehaviour, IEnemyMover
+public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private EnemyData _data;
 

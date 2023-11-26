@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMover : MonoBehaviour, IPlayerMover
+public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _stepSize;

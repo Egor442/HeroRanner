@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
-public class EnemyDeceased : MonoBehaviour, IEnemyDeceased
+public class EnemyDeceased : MonoBehaviour
 {
     private Animator _animator;
 

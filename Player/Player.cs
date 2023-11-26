@@ -5,8 +5,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerTouched))]
 public class Player : MonoBehaviour
 {
-    private IPlayerDamager _playerDamager;
-    private IPlayerTouched _playerTouched;
+    private PlayerDamager _playerDamager;
+    private PlayerTouched _playerTouched;
 
     public void Initialize()
     {
@@ -15,13 +15,15 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage)
-    {       
+    {
         _playerDamager.TakeDamage(damage);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent(out Enemy enemy))
+        if (collision.TryGetComponent(out Enemy enemy))
+        {
             _playerTouched.Touch();
+        }
     }
 }
