@@ -3,12 +3,12 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerAnimator))]
 [RequireComponent(typeof(PlayerDeceased))]
-public class PlayerDamager : MonoBehaviour, IPlayerDamager
+public class PlayerDamager : MonoBehaviour
 {
     [SerializeField] private int _health;
 
-    private IPlayerAnimator _playerAnimator;
-    private IPlayerDeceased _playerDeceased;
+    private PlayerAnimator _playerAnimator;
+    private PlayerDeceased _playerDeceased;
 
     public event UnityAction<int> HealthChanged;
 

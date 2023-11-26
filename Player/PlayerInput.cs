@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private Button _moveUpButton;
     [SerializeField] private Button _moveDownButton;
 
-    private IPlayerMover _mover;
+    private PlayerMover _mover;
 
     public void Initialize()
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerTouched : MonoBehaviour, IPlayerTouched
+public class PlayerTouched : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioTouched;
 

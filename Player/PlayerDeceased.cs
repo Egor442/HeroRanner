@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerAnimator))]
-public class PlayerDeceased : MonoBehaviour, IPlayerDeceased
+public class PlayerDeceased : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioDiead;
     [SerializeField] private GameObject _gameOverScreen;
 
-    private IPlayerAnimator _playerAnimator;   
+    private PlayerAnimator _playerAnimator;   
 
     public bool IsDied { get; private set; }
 

@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyData _data;
 
-    private IEnemyMover _enemyMover;
-    private IEnemyDeceased _enemyDeceased;
+    private EnemyMover _enemyMover;
+    private EnemyDeceased _enemyDeceased;
 
     private void Awake()
     {
